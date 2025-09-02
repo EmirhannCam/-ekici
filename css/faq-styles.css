@@ -1,0 +1,338 @@
+/* SSS (FAQ) Sayfası Stilleri */
+
+/* Sayfa Başlık Bölümü */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.page-header h1:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #ff4d30;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* SSS Bölümü */
+.faq {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+/* Arama Kutusu */
+.faq-search {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faq-search h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.search-box {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e1e1e1;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: #ff4d30;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 77, 48, 0.2);
+}
+
+.search-box button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: #ff4d30;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #e63e21;
+}
+
+/* Kategori Butonları */
+.faq-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.category-btn {
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #e1e1e1;
+}
+
+.category-btn.active {
+    background-color: #ff4d30;
+    color: #fff;
+}
+
+/* SSS Listesi */
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    background-color: #fff;
+    border-left: 5px solid #ff4d30;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 20px 25px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.faq-icon {
+    color: #ff4d30;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.faq-question.active {
+    background-color: #f8f9fa;
+}
+
+.faq-question.active h3 {
+    color: #ff4d30;
+}
+
+.faq-question.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    background-color: #f8f9fa;
+}
+
+.faq-answer p {
+    padding: 20px 25px;
+    margin: 0;
+    color: #666;
+    line-height: 1.8;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 1000px;
+    padding: 0;
+}
+
+/* CTA Bölümü */
+.cta-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+/* Responsive Tasarım */
+@media screen and (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .faq-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .category-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* İkon Stilleri */
+.faq-categories .category-btn::before {
+    font-family: "Font Awesome 5 Free";
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+.faq-categories .category-btn[data-category="all"]::before {
+    content: "\f03a";
+}
+
+.faq-categories .category-btn[data-category="pricing"]::before {
+    content: "\f155";
+}
+
+.faq-categories .category-btn[data-category="service"]::before {
+    content: "\f0ad";
+}
+
+.faq-categories .category-btn[data-category="process"]::before {
+    content: "\f021";
+}
+
+.faq-categories .category-btn[data-category="insurance"]::before {
+    content: "\f132";
+}
+
+/* Kategori Renkleri */
+.faq-item[data-category="pricing"] {
+    border-left-color: #28a745;
+}
+
+.faq-item[data-category="service"] {
+    border-left-color: #007bff;
+}
+
+.faq-item[data-category="process"] {
+    border-left-color: #ffc107;
+}
+
+.faq-item[data-category="insurance"] {
+    border-left-color: #6f42c1;
+}
+
+/* Sayfa Yükleme Animasyonu */
+.faq-item, .faq-search, .faq-categories, .page-header h1, .page-header p {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.page-header h1 {
+    animation-delay: 0.2s;
+}
+
+.page-header p {
+    animation-delay: 0.4s;
+}
+
+.faq-search {
+    animation-delay: 0.6s;
+}
+
+.faq-categories {
+    animation-delay: 0.8s;
+}
+
+.faq-item {
+    animation-delay: calc(1s + (var(--item-index) * 0.1s));
+}
+
+/* Vurgu Efekti */
+.highlight {
+    background-color: rgba(255, 77, 48, 0.2);
+    padding: 2px 0;
+}

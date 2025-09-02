@@ -1,0 +1,568 @@
+/* Hizmetlerimiz Sayfası Özel Stilleri */
+
+/* Genel Stil Geliştirmeleri */
+.bg-light {
+    background-color: #f8f9fa;
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Sayfa Başlık Alanı Geliştirmesi */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/oto-cekici.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 77, 48, 0.2);
+    z-index: 1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    animation: fadeInDown 1s ease;
+    letter-spacing: 2px;
+}
+
+.page-header p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Hizmet İkonları */
+.service-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    animation: fadeIn 1.2s ease;
+}
+
+.service-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15px;
+    width: 150px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon-item:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 77, 48, 0.8);
+    box-shadow: 0 10px 25px rgba(255, 77, 48, 0.4);
+}
+
+.service-icon-item i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.service-icon-item:hover i {
+    transform: scale(1.2);
+}
+
+.service-icon-item span {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Hizmet Detay Alanı Geliştirmeleri */
+.services-detail {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-detail:before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 77, 48, 0.1) 0%, rgba(255, 77, 48, 0) 70%);
+    top: -150px;
+    left: -150px;
+    z-index: 0;
+}
+
+.services-detail:after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 77, 48, 0.1) 0%, rgba(255, 77, 48, 0) 70%);
+    bottom: -150px;
+    right: -150px;
+    z-index: 0;
+}
+
+.service-detail-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.service-detail-item.reverse {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+}
+
+.service-detail-item.reverse .service-detail-content {
+    direction: ltr;
+}
+
+.service-detail-image {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+}
+
+.service-detail-image:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+    border-top: 5px solid #ff4d30;
+    border-left: 5px solid #ff4d30;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease;
+    border-radius: 10px 0 0 0;
+}
+
+.service-detail-image:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    border-bottom: 5px solid #ff4d30;
+    border-right: 5px solid #ff4d30;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease;
+    border-radius: 0 0 10px 0;
+}
+
+.service-detail-item:hover .service-detail-image:before,
+.service-detail-item:hover .service-detail-image:after {
+    opacity: 1;
+}
+
+.service-detail-image img {
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    filter: brightness(0.95);
+}
+
+.service-detail-item:hover .service-detail-image img {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+.service-detail-content h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.service-detail-content h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background-color: #ff4d30;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.service-detail-item:hover .service-detail-content h2:after {
+    width: 120px;
+}
+
+.service-detail-content p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.service-detail-content h3 {
+    font-size: 1.6rem;
+    margin: 30px 0 20px;
+    color: #444;
+    font-weight: 600;
+}
+
+.service-detail-content ul {
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+}
+
+.service-detail-content ul li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    color: #555;
+    transition: all 0.3s ease;
+    font-size: 1.05rem;
+}
+
+.service-detail-content ul li:hover {
+    transform: translateX(8px);
+    color: #ff4d30;
+}
+
+.service-detail-content ul li i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: #ff4d30;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.service-detail-content ul li:hover i {
+    transform: scale(1.2);
+}
+
+.service-cta {
+    margin-top: 35px;
+}
+
+.service-cta .btn {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(255, 77, 48, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.service-cta .btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.service-cta .btn:hover:before {
+    left: 0;
+    width: 100%;
+}
+
+.service-cta .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 77, 48, 0.5);
+}
+
+/* CTA Bölümü Geliştirmeleri */
+.cta-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/hero-bg.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.cta-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 77, 48, 0.2);
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.cta-section p {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    padding: 18px 35px;
+    font-size: 1.15rem;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cta-buttons .btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.cta-buttons .btn:hover:before {
+    left: 0;
+    width: 100%;
+}
+
+.cta-buttons .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Animasyonlar */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Tasarım */
+@media (max-width: 992px) {
+    .service-detail-item,
+    .service-detail-item.reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        direction: ltr;
+    }
+    
+    .service-detail-content ul {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .page-header h1 {
+        font-size: 2.8rem;
+    }
+    
+    .service-icons {
+        gap: 20px;
+    }
+    
+    .service-icon-item {
+        width: 130px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 80px 0;
+    }
+    
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .page-header p {
+        font-size: 1.1rem;
+    }
+    
+    .service-detail-content h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 2.2rem;
+    }
+    
+    .service-icons {
+        gap: 15px;
+    }
+    
+    .service-icon-item {
+        width: 110px;
+        padding: 12px;
+    }
+    
+    .service-icon-item i {
+        font-size: 2rem;
+    }
+    
+    .service-icon-item span {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-detail-content ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+    
+    .service-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .service-icon-item {
+        width: calc(33% - 10px);
+        min-width: 100px;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .service-detail-content h2 {
+        font-size: 1.7rem;
+    }
+}

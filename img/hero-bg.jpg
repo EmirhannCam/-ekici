@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A237E;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#303F9F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3949AB;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="roadGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#424242;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#212121;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background (night sky) -->
+  <rect width="100%" height="100%" fill="url(#skyGradient)" />
+  
+  <!-- Stars -->
+  <g fill="#FFFFFF" opacity="0.8">
+    <!-- First row -->
+    <circle cx="100" cy="100" r="2" />
+    <circle cx="300" cy="150" r="1.5" />
+    <circle cx="500" cy="80" r="2" />
+    <circle cx="700" cy="120" r="1" />
+    <circle cx="900" cy="90" r="2" />
+    <circle cx="1100" cy="130" r="1.5" />
+    <circle cx="1300" cy="70" r="1" />
+    <circle cx="1500" cy="110" r="2" />
+    <circle cx="1700" cy="140" r="1.5" />
+    <circle cx="1900" cy="60" r="1" />
+    
+    <!-- Second row -->
+    <circle cx="200" cy="200" r="1" />
+    <circle cx="400" cy="250" r="2" />
+    <circle cx="600" cy="180" r="1.5" />
+    <circle cx="800" cy="220" r="1" />
+    <circle cx="1000" cy="190" r="2" />
+    <circle cx="1200" cy="230" r="1.5" />
+    <circle cx="1400" cy="170" r="1" />
+    <circle cx="1600" cy="210" r="2" />
+    <circle cx="1800" cy="240" r="1.5" />
+    
+    <!-- Third row -->
+    <circle cx="150" cy="300" r="2" />
+    <circle cx="350" cy="350" r="1.5" />
+    <circle cx="550" cy="280" r="1" />
+    <circle cx="750" cy="320" r="2" />
+    <circle cx="950" cy="290" r="1.5" />
+    <circle cx="1150" cy="330" r="1" />
+    <circle cx="1350" cy="270" r="2" />
+    <circle cx="1550" cy="310" r="1.5" />
+    <circle cx="1750" cy="340" r="1" />
+    <circle cx="1850" cy="260" r="2" />
+  </g>
+  
+  <!-- Moon with glow -->
+  <g filter="url(#glow)">
+    <circle cx="1700" cy="200" r="80" fill="#FFECB3" />
+  </g>
+  <circle cx="1670" cy="180" r="20" fill="#E1BEE7" opacity="0.3" />
+  <circle cx="1720" cy="220" r="15" fill="#E1BEE7" opacity="0.3" />
+  <circle cx="1680" cy="230" r="25" fill="#E1BEE7" opacity="0.3" />
+  
+  <!-- City skyline silhouette -->
+  <path d="M0,600 L100,600 L100,500 L150,500 L150,550 L200,550 L200,450 L250,450 L250,500 L300,500 L300,400 L350,400 L350,500 L400,500 L400,550 L450,550 L450,500 L500,500 L500,450 L550,450 L550,500 L600,500 L600,550 L650,550 L650,450 L700,450 L700,400 L750,400 L750,500 L800,500 L800,550 L850,550 L850,450 L900,450 L900,350 L950,350 L950,450 L1000,450 L1000,500 L1050,500 L1050,400 L1100,400 L1100,350 L1150,350 L1150,450 L1200,450 L1200,500 L1250,500 L1250,400 L1300,400 L1300,450 L1350,450 L1350,550 L1400,550 L1400,500 L1450,500 L1450,400 L1500,400 L1500,350 L1550,350 L1550,450 L1600,450 L1600,500 L1650,500 L1650,550 L1700,550 L1700,500 L1750,500 L1750,450 L1800,450 L1800,550 L1850,550 L1850,500 L1900,500 L1900,600 L1920,600 L1920,1080 L0,1080 Z" fill="#000000" opacity="0.8" />
+  
+  <!-- Road -->
+  <rect x="0" y="600" width="1920" height="480" fill="url(#roadGradient)" />
+  
+  <!-- Road markings -->
+  <rect x="200" y="840" width="200" height="15" fill="#FFFFFF" />
+  <rect x="600" y="840" width="200" height="15" fill="#FFFFFF" />
+  <rect x="1000" y="840" width="200" height="15" fill="#FFFFFF" />
+  <rect x="1400" y="840" width="200" height="15" fill="#FFFFFF" />
+  <rect x="1800" y="840" width="120" height="15" fill="#FFFFFF" />
+  
+  <!-- Tow truck with lights -->
+  <g transform="translate(500, 750)">
+    <!-- Truck body -->
+    <rect x="0" y="0" width="500" height="100" rx="15" fill="#ff4d30" />
+    <rect x="350" y="-60" width="150" height="70" rx="10" fill="#ff4d30" />
+    
+    <!-- Truck cabin windows -->
+    <rect x="360" y="-50" width="130" height="50" rx="5" fill="#B3E5FC" opacity="0.7" />
+    
+    <!-- Truck flatbed -->
+    <rect x="0" y="0" width="350" height="20" fill="#333333" />
+    
+    <!-- Truck wheels -->
+    <circle cx="100" cy="100" r="40" fill="#111111" />
+    <circle cx="100" cy="100" r="20" fill="#333333" />
+    <circle cx="250" cy="100" r="40" fill="#111111" />
+    <circle cx="250" cy="100" r="20" fill="#333333" />
+    <circle cx="400" cy="100" r="40" fill="#111111" />
+    <circle cx="400" cy="100" r="20" fill="#333333" />
+    
+    <!-- Towing mechanism -->
+    <rect x="0" y="20" width="70" height="15" fill="#333333" />
+    <rect x="30" y="35" width="15" height="40" fill="#333333" />
+    
+    <!-- Headlights with glow -->
+    <g filter="url(#glow)">
+      <rect x="490" y="20" width="20" height="20" rx="5" fill="#FFEB3B" opacity="0.9" />
+      <rect x="490" y="60" width="20" height="20" rx="5" fill="#FFEB3B" opacity="0.9" />
+    </g>
+    
+    <!-- Light beams -->
+    <polygon points="510,25 510,35 800,0 800,100" fill="#FFEB3B" opacity="0.1" />
+    <polygon points="510,65 510,75 800,50 800,150" fill="#FFEB3B" opacity="0.1" />
+    
+    <!-- Warning lights on top with animation -->
+    <g filter="url(#glow)">
+      <circle cx="370" cy="-70" r="10" fill="#FF0000">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="410" cy="-70" r="10" fill="#0000FF">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="450" cy="-70" r="10" fill="#FF0000">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="490" cy="-70" r="10" fill="#0000FF">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <!-- Company logo -->
+    <rect x="150" y="30" width="200" height="50" rx="5" fill="#FFFFFF" />
+    <text x="170" y="65" font-family="Arial" font-size="24" font-weight="bold" fill="#333333">HIZLI ÇEKİCİ</text>
+  </g>
+  
+  <!-- Car being towed -->
+  <g transform="translate(300, 700)">
+    <!-- Car body -->
+    <rect x="0" y="0" width="250" height="60" rx="15" fill="#1976D2" />
+    <rect x="40" y="-40" width="170" height="50" rx="10" fill="#1976D2" />
+    
+    <!-- Car windows -->
+    <rect x="50" y="-30" width="150" height="30" rx="5" fill="#B3E5FC" opacity="0.7" />
+    
+    <!-- Car wheels -->
+    <circle cx="70" cy="60" r="30" fill="#111111" />
+    <circle cx="70" cy="60" r="15" fill="#333333" />
+    <circle cx="180" cy="60" r="30" fill="#111111" />
+    <circle cx="180" cy="60" r="15" fill="#333333" />
+    
+    <!-- Towing connection -->
+    <path d="M250,30 L300,30" stroke="#333333" stroke-width="10" />
+  </g>
+</svg>
