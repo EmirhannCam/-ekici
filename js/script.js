@@ -13,38 +13,39 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Form verilerini al
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value || 'Belirtilmedi';
-            const subject = document.getElementById('subject');
-            const subjectText = subject.options[subject.selectedIndex] ? subject.options[subject.selectedIndex].text : 'Belirtilmedi';
-            const message = document.getElementById('message').value;
-            // WhatsApp mesajını oluştur
-            let whatsappMessage = `*İletişim Formu Mesajı*%0A%0A`;
-            whatsappMessage += `*İsim:* ${name}%0A`;
-            whatsappMessage += `*Telefon:* ${phone}%0A`;
-            whatsappMessage += `*E-posta:* ${email}%0A`;
-            whatsappMessage += `*Konu:* ${subjectText}%0A`;
-            whatsappMessage += `*Mesaj:* ${message}`;
-            // WhatsApp API URL'ini oluştur (telefon numarasını güncelleyin)
-            const whatsappNumber = '905355029257'; // Başında 90 ile Türkiye kodu olmalı
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-            // Başarı mesajı göster
-            const successMessage = document.createElement('div');
-            successMessage.className = 'success-message';
-            successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Mesajınız WhatsApp üzerinden gönderiliyor...';
-            contactForm.insertBefore(successMessage, contactForm.firstChild);
-            contactForm.reset();
-            // WhatsApp'a yönlendir
-            window.location.href = whatsappURL;
-            // 5 saniye sonra başarı mesajını kaldır
-            setTimeout(() => {
-                successMessage.remove();
-            }, 5000);
-        });
+    e.preventDefault();
+    // Form verilerini al
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim() || 'Belirtilmedi';
+    const subject = document.getElementById('subject');
+    const subjectText = subject.options[subject.selectedIndex] ? subject.options[subject.selectedIndex].text : 'Belirtilmedi';
+    const message = document.getElementById('message').value.trim();
+    // Satır bazlı WhatsApp mesajı oluştur
+    const lines = [
+        '*İletişim Formu Mesajı*',
+        `İsim: ${name}`,
+        `Telefon: ${phone}`,
+        `E-posta: ${email}`,
+        `Konu: ${subjectText}`,
+        `Mesaj: ${message}`
+    ];
+    const whatsappMessage = encodeURIComponent(lines.join('\n'));
+    const whatsappNumber = '905355029257';
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+    // Başarı mesajı göster
+    const successMessage = document.createElement('div');
+    successMessage.className = 'success-message';
+    successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Mesajınız WhatsApp üzerinden gönderiliyor...';
+    contactForm.insertBefore(successMessage, contactForm.firstChild);
+    contactForm.reset();
+    // WhatsApp'a yönlendir
+    window.location.href = whatsappURL;
+    // 5 saniye sonra başarı mesajını kaldır
+    setTimeout(() => {
+        successMessage.remove();
+    }, 5000);
+});
     }
     
     // Sayfa dışı tıklamada menüyü kapat
