@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const subject = document.getElementById('subject');
             const subjectText = subject.options[subject.selectedIndex] ? subject.options[subject.selectedIndex].text : 'Belirtilmedi';
             const message = document.getElementById('message').value;
-            
             // WhatsApp mesajını oluştur
             let whatsappMessage = `*İletişim Formu Mesajı*%0A%0A`;
             whatsappMessage += `*İsim:* ${name}%0A`;
@@ -30,27 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
             whatsappMessage += `*E-posta:* ${email}%0A`;
             whatsappMessage += `*Konu:* ${subjectText}%0A`;
             whatsappMessage += `*Mesaj:* ${message}`;
-            
             // WhatsApp API URL'ini oluştur (telefon numarasını güncelleyin)
             const whatsappNumber = '905355029257'; // Başında 90 ile Türkiye kodu olmalı
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-            
             // Başarı mesajı göster
             const successMessage = document.createElement('div');
             successMessage.className = 'success-message';
             successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Mesajınız WhatsApp üzerinden gönderiliyor...';
-            
-            // Mesajı formun üstüne ekle
             contactForm.insertBefore(successMessage, contactForm.firstChild);
-            
-            // Formu temizle
             contactForm.reset();
-            
-            // 2 saniye sonra WhatsApp'ı aç
-            setTimeout(() => {
-                window.open(whatsappURL, '_blank');
-            }, 1000);
-            
+            // WhatsApp'a yönlendir
+            window.location.href = whatsappURL;
             // 5 saniye sonra başarı mesajını kaldır
             setTimeout(() => {
                 successMessage.remove();
