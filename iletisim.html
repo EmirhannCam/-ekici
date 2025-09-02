@@ -254,15 +254,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Form gönderim animasyonu
             const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Form doğrulama ve gönderim işlemleri burada yapılabilir
-                    alert('Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.');
-                    contactForm.reset();
-                });
-            }
+            // script.js dosyasındaki WhatsApp entegrasyonu kullanılacak. Buradaki submit event kaldırıldı.
             
             // Form alanları için animasyon
             const formInputs = document.querySelectorAll('.form-group input, .form-group textarea, .form-group select');
